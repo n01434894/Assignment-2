@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capital Name</title>
+
+<style>
+
+p {
+  font-size: 20px;
+  padding: 5px;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+
+</style>
+
+
+	<script>
+		function hideCapital() {
+			document.getElementById("capital").style.display = "none";
+		}
+
+		function showCapital() {
+			document.getElementById("capital").style.display = "block";
+		}
+
+		function toggleCapital() {
+			var capital = document.getElementById("capital");
+			if (capital.style.display === "none") {
+				showCapital();
+			} else {
+				hideCapital();
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2> Country: </h2>
+    
+    <p>Canada</p>
+
+    <h2> Capital: </h2>
+
+	<p id="capital">Ottawa.</p>
+
+    <br><br>
+
+
+	<button onclick="hideCapital()">Hide capital name</button>
+	<button onclick="showCapital()">Show capital name</button>
+	<button onclick="toggleCapital()">Toggle</button>
+
+    <br>  <br>
+
+    <p class="yellow" onmouseover="this.classList.add('yellow')" onmouseout="this.classList.remove('yellow')">Hover on this paragraph for yellow.</p>
+
+	<p class="green" onclick="this.classList.toggle('green')">Click on this paragraph for Green example</p>
+
+    
+</body>
+</html>
